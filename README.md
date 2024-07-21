@@ -1,12 +1,28 @@
 <<<<<<< HEAD
-# BurgerApp
-=======
-# React + Vite
+# React + Vite Burger App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple React application that allows users to build and customize a virtual burger. Users can add and remove ingredients to the burger.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
->>>>>>> 90a200f (Initial Commit)
+- **Add Ingredients:** Add various ingredients to your burger using the provided buttons.
+- **Remove Ingredients:** Click on ingredients to remove them from the burger.
+
+## Technologies Used
+
+- **React**
+- **TypeScript**
+- **FontAwesome**: For icons.
+- **CSS**: For styling the components.
+
+### Components
+
+- **BaseBread.tsx**: Component for rendering the base bread of the burger.
+- **TopBread.tsx**: Component for rendering the top bread of the burger with seeds.
+- **Ingredient.tsx**: Component for rendering the ingredients added to the burger.
+- **Burger.tsx**: Context provider for managing the burger state (adding/removing ingredients).
+- **App.tsx**: Main application component that includes the burger building interface and controls.
+
+
+
+

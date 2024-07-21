@@ -1,13 +1,35 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import '../assets/ingredient.css';
+import { BurgerContext } from '../context/Burger.tsx';
 
-const ingredient = ({ color, type }) => {
+const Ingredient: React.FC = () => {
+    // Get the context value
+    const context = useContext(BurgerContext);
+
+    //an error if context is not available
+    if (!context) {
+        throw new Error('Ingredient must be used within a BurgerProvider');
+    }
+
+    // Destructure ingredients from context
+    const { ingredients } = context;
+
     return (
-        <div className={`filling ${type.any}`} style={{ backgroundColor: color }}>
-            {type}
-        </div>
+        <>
+            {ingredients.map((ingredient, index) => (
+                <div
+                    key={index}
+                    className={`filling ${ingredient.type}`}
+                    style={{ backgroundColor: ingredient.color }}
+                >
+                    {ingredient.type}
+                </div>
+            ))}
+        </>
     );
 };
 
-export default ingredient;
+export default Ingredient;
+
+
 

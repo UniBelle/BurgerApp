@@ -1,10 +1,9 @@
 import React from 'react';
-import '../assets/BaseBread.css'
+import '../assets/BaseBread.css';
 
-const BaseBread = ({ size }) => {
+const BaseBread: React.FC<{ size: string }> = ({ size }) => {
   return (
-    <div className={`base-bread ${size}`}>
-    </div>
+    <div className={`base-bread ${size}`} />
   );
 };
 

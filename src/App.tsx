@@ -24,10 +24,6 @@ const App: React.FC = () => {
         <button onClick={() => addIngredient({ color: 'red', type: 'Tomato' })}>Add Tomato</button>
         <button onClick={() => addIngredient({ color: 'green', type: 'Lettuce' })}>Add Lettuce</button>
         <button onClick={() => addIngredient({ color: 'brown', type: 'Meat' })}>Add Meat</button>
-        <button onClick={() => removeIngredient('Cheese')}>Remove Cheese</button>
-        <button onClick={() => removeIngredient('Tomato')}>Remove Tomato</button>
-        <button onClick={() => removeIngredient('Lettuce')}>Remove Lettuce</button>
-        <button onClick={() => removeIngredient('Meat')}>Remove Meat</button>
       </div>
     </div>
   );

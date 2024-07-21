@@ -1,0 +1,31 @@
+/* BaseBread.css */
+.base-bread {
+    background-color: #b47c29;
+    /* Light brown color */
+    border: 1px solid #d0b3a0;
+    /* Slightly darker border */
+    border-radius: 0 0 20px 20px;
+    /* Rounded corners only at the bottom */
+    padding: 10px;
+    width: 100px;
+    /* Adjust size as needed */
+    height: 60px;
+    /* Adjust size as needed */
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    color: #53331f;
+    /* Dark brown color for text */
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+    /* Inner shadow to mimic bread texture */
+}
+
+.base-bread.small {
+    width: 80px;
+    height: 40px;
+}
+
+.base-bread.large {
+    width: 120px;
+    height: 60px;
+}

@@ -1,21 +1,21 @@
 import React from 'react';
 import '../assets/TopBread.css';
+interface TopBreadProps {
+  size: string;
+}
 
-const TopBread: React.FC<{ size: string }> = ({ size }) => {
+const TopBread: React.FC<TopBreadProps> = ({ size }) => {
+
+  const seeds = Array.from({ length: 10 }, (_, index) => (
+    <div key={index} className={`seed${index + 1}`} />
+  ));
+
   return (
     <div className={`top-burger ${size}`}>
-      <div className="seed1" />
-      <div className="seed2" />
-      <div className="seed3" />
-      <div className="seed4" />
-      <div className="seed5" />
-      <div className="seed6" />
-      <div className="seed7" />
-      <div className="seed8" />
-      <div className="seed9" />
-      <div className="seed10" />
+      {seeds}
     </div>
   );
 };
 
 export default TopBread;
+

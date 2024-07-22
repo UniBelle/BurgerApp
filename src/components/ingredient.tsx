@@ -2,17 +2,15 @@ import React, { useContext } from 'react';
 import '../assets/ingredient.css';
 import { BurgerContext } from '../context/Burger';
 
+// Define the component
 const Ingredient: React.FC = () => {
-    // Get the context value
-    const context = useContext(BurgerContext);
+    // Access the context value
+    const { ingredients, removeIngredient } = useContext(BurgerContext);
 
-    //an error if context is not available
-    if (!context) {
+    // Throw an error if the context is not available
+    if (!ingredients || !removeIngredient) {
         throw new Error('Ingredient must be used within a BurgerProvider');
     }
-
-    // Destructure ingredients and removeIngredient from context
-    const { ingredients, removeIngredient } = context;
 
     return (
         <>
@@ -20,7 +18,7 @@ const Ingredient: React.FC = () => {
                 <div
                     key={index}
                     className={`filling ${ingredient.type}`}
-                    style={{ backgroundColor: ingredient.color }}
+                    style={{ backgroundColor: ingredient.color }} // Consider moving this style to a CSS class if applicable
                     onClick={() => removeIngredient(ingredient.type)}
                 >
                     {ingredient.type}
